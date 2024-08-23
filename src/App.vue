@@ -16,12 +16,12 @@ export default {
     HelloWorld
   },
   async created() {
-    await failingApi();
-    // this.loadData();
+    // await failingApi();
+    this.loadData();
   },
   methods: {
     async loadData() {
-      // await failingApi();
+      await failingApi();
     }
   }
 }
