@@ -8,10 +8,21 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
+import { failingApi } from "@/api/dummy";
+
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  async created() {
+    await failingApi();
+    // this.loadData();
+  },
+  methods: {
+    async loadData() {
+      // await failingApi();
+    }
   }
 }
 </script>
